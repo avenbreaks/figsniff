@@ -1,0 +1,46 @@
+{
+  "name": "figsniff",
+  "version": "0.1.0",
+  "description": "Reverse-engineer any website's design system — colors, typography, spacing, components, and libraries.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "figsniff": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/cli.js",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "design",
+    "extractor",
+    "scraper",
+    "css",
+    "colors",
+    "typography",
+    "design-system",
+    "tokens",
+    "playwright",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.29.1",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "css-tree": "^2.3.1",
+    "ora": "^8.1.1",
+    "playwright": "^1.49.0"
+  },
+  "devDependencies": {
+    "@types/css-tree": "^2.3.8",
+    "@types/node": "^22.10.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}
